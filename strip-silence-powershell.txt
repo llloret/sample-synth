@@ -1,0 +1,3 @@
+$files = Get-ChildItem
+foreach ($file in $files) {$s = "sox $file" + " " + [io.path]::GetFileNameWithoutExtension($file) + "s.wav" + " silence 1
+0 0.1% 1 0.2 0.05%"; Invoke-Expression "$s"}
